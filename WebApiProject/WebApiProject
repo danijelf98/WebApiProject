@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiProject</name>
+    </assembly>
+    <members>
+        <member name="T:WebApiProject.Migrations.init">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApiProject.Migrations.init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApiProject.Migrations.init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApiProject.Migrations.init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.GetAllMovies">
+            <summary>
+            Get All Movies
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.GetMovieById(System.Int32)">
+            <summary>
+            Get Movie By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.AddMovie(WebApiProject.Models.Binding.MovieBinding)">
+            <summary>
+            Add Movie
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.UpdateMovie(WebApiProject.Models.Binding.MovieUpdateBinding)">
+            <summary>
+            Update Movie
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.DeleteMovie(System.Int32)">
+            <summary>
+            Delete Movie
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

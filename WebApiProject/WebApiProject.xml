@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiProject</name>
+    </assembly>
+    <members>
+        <member name="M:WebApiProject.Controllers.MovieController.GetMovieById(System.Int32)">
+            <summary>
+            Get Movie By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.MovieController.GetAllMovies">
+            <summary>
+            Get All Movies
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.MovieController.AddMovie(WebApiProject.Models.Binding.MovieBinding)">
+            <summary>
+            Add Movie
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.MovieController.UpdateMovie(WebApiProject.Models.Binding.MovieUpdateBinding)">
+            <summary>
+            Update Movie
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.MovieController.DeleteMovie(System.Int32)">
+            <summary>
+            Delete Movie
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.MovieController.GetActorById(System.Int32)">
+            <summary>
+            Get Actor By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.MovieController.GetActors">
+            <summary>
+            Get Actors
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.MovieController.AddActor(WebApiProject.Models.Binding.ActorBinding)">
+            <summary>
+            Add Actor
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.MovieController.UpdateActor(WebApiProject.Models.Binding.ActorUpdateBinding)">
+            <summary>
+            Update Actor
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Controllers.MovieController.DeleteActor(System.Int32)">
+            <summary>
+            Delete Actor
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApiProject.Migrations.updatedValuesMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApiProject.Migrations.updatedValuesMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApiProject.Migrations.updatedValuesMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApiProject.Migrations.updatedValuesMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.GetAllMovies">
+            <summary>
+            Get All Movies
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.GetMovieById(System.Int32)">
+            <summary>
+            Get Movie By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.AddMovie(WebApiProject.Models.Binding.MovieBinding)">
+            <summary>
+            Add Movie
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.UpdateMovie(WebApiProject.Models.Binding.MovieUpdateBinding)">
+            <summary>
+            Update Movie
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.DeleteMovie(System.Int32)">
+            <summary>
+            Delete Movie
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.GetActors">
+            <summary>
+            Get Actors
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.GetActorById(System.Int32)">
+            <summary>
+            Get Actor By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.AddActor(WebApiProject.Models.Binding.ActorBinding)">
+            <summary>
+            Add Actor
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.UpdateActor(WebApiProject.Models.Binding.ActorUpdateBinding)">
+            <summary>
+            Update Actor
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.DeleteActor(System.Int32)">
+            <summary>
+            Delete Actor By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Interfaces.IMovieService.AddActor(WebApiProject.Models.Binding.ActorBinding)">
+            <summary>
+            Add Actor
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Interfaces.IMovieService.DeleteActor(System.Int32)">
+            <summary>
+            Delete Actor By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Interfaces.IMovieService.GetActorById(System.Int32)">
+            <summary>
+            Get Actor By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Interfaces.IMovieService.GetActors">
+            <summary>
+            Get Actors
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Interfaces.IMovieService.GetAllMovies">
+            <summary>
+            Get All Movies
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Interfaces.IMovieService.GetMovieById(System.Int32)">
+            <summary>
+            Get Movie By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiProject.Services.Interfaces.IMovieService.UpdateActor(WebApiProject.Models.Binding.ActorUpdateBinding)">
+            <summary>
+            Update Actor
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
