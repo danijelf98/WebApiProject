@@ -22,6 +22,16 @@ namespace WebApiProject.Services.Implementations
         #region Movie CRUD
 
         /// <summary>
+        /// Validates if movie exist in Database
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<bool> MoiveExist(int id)
+        {
+            return await db.Movies.FindAsync(id) != null; 
+        }
+
+        /// <summary>
         /// Get All Movies
         /// </summary>
         /// <returns></returns>

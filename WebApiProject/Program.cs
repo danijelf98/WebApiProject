@@ -1,4 +1,5 @@
 
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.OpenApi.Models;
@@ -17,7 +18,8 @@ namespace WebApiProject
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+           builder.Services.AddValidatorsFromAssemblyContaining<Program>(ServiceLifetime.Transient);
+           builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

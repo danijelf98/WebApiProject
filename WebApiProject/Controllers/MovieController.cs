@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
 using WebApiProject.Context;
 using WebApiProject.Models.Binding;
 using WebApiProject.Models.ViewModel;
@@ -10,10 +11,14 @@ namespace WebApiProject.Controllers
     public class MovieController : ControllerBase
     {
         private readonly IMovieService movieService;
+        private readonly IValidator<MovieUpdateBinding> movieUpdateBindingValidator;
+        private readonly IValidator<ActorBinding> actorBindingValidator;
 
-        public MovieController(IMovieService movieService)
+        public MovieController(IMovieService movieService, IValidator<MovieUpdateBinding> movieUpdateBindingValidator, IValidator<ActorBinding> actorBindingValidator)
         {
             this.movieService = movieService;
+            this.movieUpdateBindingValidator = movieUpdateBindingValidator;
+            this.actorBindingValidator = actorBindingValidator;
         }
 
         /// <summary>
@@ -60,8 +65,14 @@ namespace WebApiProject.Controllers
         [ProducesResponseType(typeof(MovieViewModel), StatusCodes.Status200OK)]
         public async Task<ActionResult<MovieViewModel>> UpdateMovie([FromBody]MovieUpdateBinding model)
         {
-            var movie = await movieService.UpdateMovie(model);
-            return Ok(movie);
+            var result = await movieUpdateBindingValidator.ValidateAsync(model);
+            if (result.IsValid)
+            {
+                var movie = movieService.UpdateMovie(model);
+                return Ok(movie);
+            }
+
+            return BadRequest(result.ToDictionary());
         }
         /// <summary>
         /// Delete Movie
@@ -109,8 +120,15 @@ namespace WebApiProject.Controllers
         [ProducesResponseType(typeof(ActorViewModel), StatusCodes.Status200OK)]
         public async Task<ActionResult<ActorViewModel>> AddActor([FromBody] ActorBinding model)
         {
-            var Actor = await movieService.AddActor(model);
-            return Ok(Actor);
+
+            var result = await actorBindingValidator.ValidateAsync(model);
+            if (result.IsValid)
+            {
+                var actor = movieService.AddActor(model);
+                return Ok(actor);
+            }
+
+            return BadRequest(result.ToDictionary());
         }
         /// <summary>
         /// Update Actor

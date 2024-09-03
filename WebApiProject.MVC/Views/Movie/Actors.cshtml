@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebApiProject.Models.ViewModel.ActorViewModel>
+
+@{
+    ViewData["Title"] = "Actors";
+}
+
+<h3>Actors</h3>
+
+<p>
+    <a asp-action="AddActor">Add New Actor</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MovieId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "UpdateActor", new { id = item.Id }) |
+                @Html.ActionLink("Details", "ActorDetails", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "DeleteActor", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

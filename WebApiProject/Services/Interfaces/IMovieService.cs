@@ -55,5 +55,6 @@ namespace WebApiProject.Services.Interfaces
         /// <returns></returns>
         Task<ActorViewModel> UpdateActor(ActorUpdateBinding model);
         Task<MovieViewModel> UpdateMovie(MovieUpdateBinding model);
+        Task<bool> MoiveExist(int id);
     }
 }

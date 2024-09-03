@@ -13,6 +13,8 @@ namespace WebApiProject.MVC.Controllers
             this.webApiMovieServiceClient = webApiMovieServiceClient;
         }
 
+        #region Movie CRUD
+
         public IActionResult Movies()
         {
             var movies = webApiMovieServiceClient.GetMovies();
@@ -50,5 +52,49 @@ namespace WebApiProject.MVC.Controllers
             webApiMovieServiceClient.DeleteMovie(id);
             return RedirectToAction("Movies");
         }
+
+        #endregion
+
+        #region Actor CRUD
+
+        public IActionResult Actors()
+        {
+            var actors = webApiMovieServiceClient.GetActors();
+            return View(actors);
+        }
+        public IActionResult ActorDetails(int id)
+        {
+            var response = webApiMovieServiceClient.GetActor(id);
+            return View(response);
+        }
+        public IActionResult AddActor()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddActor(ActorBinding model)
+        {
+            webApiMovieServiceClient.AddActor(model);
+            return RedirectToAction("Actors");
+        }
+
+        public IActionResult UpdateActor(int id)
+        {
+            var response = webApiMovieServiceClient.GetActor<ActorUpdateBinding>(id);
+            return View(response);
+        }
+        [HttpPost]
+        public IActionResult UpdateActor(ActorUpdateBinding model)
+        {
+            webApiMovieServiceClient.Update(model);
+            return RedirectToAction("Actors");
+        }
+        public IActionResult DeleteActor(int id)
+        {
+            webApiMovieServiceClient.DeleteActor(id);
+            return RedirectToAction("Actors");
+        }
+
+        #endregion
     }
 }

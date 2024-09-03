@@ -84,6 +84,13 @@
         <member name="M:WebApiProject.Migrations.updatedValuesMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="M:WebApiProject.Services.Implementations.MovieService.MoiveExist(System.Int32)">
+            <summary>
+            Validates if movie exist in Database
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:WebApiProject.Services.Implementations.MovieService.GetMovies">
             <summary>
             Get All Movies
