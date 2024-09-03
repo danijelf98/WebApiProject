@@ -34,9 +34,9 @@ namespace WebApiProject.Controllers
         /// <returns></returns>
         [HttpGet("movies")]
         [ProducesResponseType(typeof(List<MovieViewModel>), StatusCodes.Status200OK)]
-        public async Task<ActionResult<List<MovieViewModel>>> GetAllMovies()
+        public async Task<ActionResult<List<MovieViewModel>>> GetMovies()
         {
-            var movie = await movieService.GetAllMovies();
+            var movie = await movieService.GetMovies();
             return Ok(movie);
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace WebApiProject.Controllers
         [ProducesResponseType(typeof(MovieViewModel), StatusCodes.Status200OK)]
         public async Task<ActionResult<MovieViewModel>> DeleteMovie(int id)
         {
-            var movie = await movieService.DeleteMovie(id);
+            await movieService.DeleteMovie(id);
             return Ok(new { Message = $"Movie with Id {id} is successfully deleted!" });
         }
 

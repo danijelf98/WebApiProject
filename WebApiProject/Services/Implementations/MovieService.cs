@@ -25,7 +25,7 @@ namespace WebApiProject.Services.Implementations
         /// Get All Movies
         /// </summary>
         /// <returns></returns>
-        public async Task<List<MovieViewModel>> GetAllMovies()
+        public async Task<List<MovieViewModel>> GetMovies()
         {
             var dbo = await db.Movies.ToListAsync();
             return dbo.Select(y => mapper.Map<MovieViewModel>(y)).ToList();

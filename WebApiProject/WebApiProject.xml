@@ -11,7 +11,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:WebApiProject.Controllers.MovieController.GetAllMovies">
+        <member name="M:WebApiProject.Controllers.MovieController.GetMovies">
             <summary>
             Get All Movies
             </summary>
@@ -84,7 +84,7 @@
         <member name="M:WebApiProject.Migrations.updatedValuesMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:WebApiProject.Services.Implementations.MovieService.GetAllMovies">
+        <member name="M:WebApiProject.Services.Implementations.MovieService.GetMovies">
             <summary>
             Get All Movies
             </summary>
@@ -179,7 +179,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:WebApiProject.Services.Interfaces.IMovieService.GetAllMovies">
+        <member name="M:WebApiProject.Services.Interfaces.IMovieService.GetMovies">
             <summary>
             Get All Movies
             </summary>

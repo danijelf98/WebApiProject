@@ -39,7 +39,7 @@ namespace WebApiProject.Services.Interfaces
         /// Get All Movies
         /// </summary>
         /// <returns></returns>
-        Task<List<MovieViewModel>> GetAllMovies();
+        Task<List<MovieViewModel>> GetMovies();
         /// <summary>
         /// Get Movie By Id
         /// </summary>
